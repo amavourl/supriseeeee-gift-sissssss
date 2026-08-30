@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>For My Amazing Sister ❤️</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>For My Amazing Sister ❤️</title><style>
 * {
     box-sizing: border-box;
 }
@@ -239,7 +234,7 @@ body {
     transform: scale(1.05);
 }
 
-/* ---------- SIXTH PAGE PHOTOS ---------- */
+/* ---------- SIXTH PAGE PHOTO ---------- */
 
 .photo-page {
     width: 100%;
@@ -336,457 +331,315 @@ body {
         font-size: 26px;
     }
 }
-</style>
-</head>
-
-<body>
-
-<!-- =========================
-     BACKGROUND MUSIC
-========================= -->
-
-<audio id="birthdayMusic" loop>
+</style></head><body><audio id="birthdayMusic" loop>
     <source src="birthday-song.mp3" type="audio/mpeg">
-</audio>
+</audio><section id="giftScreen" class="screen active"><div><div class="small-text">
+    SOMETHING SPECIAL FOR YOU
+</div>
 
+<h1>🎁 You Have a Surprise</h1>
 
-<!-- =========================
-     GIFT BOX SCREEN
-========================= -->
+<div class="gift" onclick="openGift()">
 
-<section id="giftScreen" class="screen active">
+    <div class="ribbon"></div>
 
-    <div>
-        <div class="small-text">
-            SOMETHING SPECIAL FOR YOU
-        </div>
+    <div class="gift-lid"></div>
 
-        <h1>🎁 You Have a Surprise</h1>
+    <div class="gift-box"></div>
 
-        <div class="gift" onclick="openGift()">
+</div>
 
-            <div class="ribbon"></div>
+<div class="tap-text">
+    Tap the gift to open it 💜
+</div>
 
-            <div class="gift-lid"></div>
+</div></section><section id="homeScreen" class="screen"><div class="home-content"><div style="font-size:55px;">🎂</div>
 
-            <div class="gift-box"></div>
+<h1>Happy Birthday, Sis! ❤️</h1>
 
-        </div>
+<p>
+    September 2 is officially your day! 🥳
+</p>
 
-        <div class="tap-text">
-            Tap the gift to open it 💜
-        </div>
-    </div>
+<p>
+    I made this little corner of the internet
+    just for you. Take your time and open
+    each surprise below. 💜
+</p>
 
-</section>
+<div class="menu">
 
+    <button class="menu-button" onclick="showPage('letterPage')">
+        <span class="emoji">💌</span>
+        A Letter For You
+    </button>
 
-<!-- =========================
-     HOME SCREEN
-========================= -->
+    <button class="menu-button" onclick="showPage('specialPage')">
+        <span class="emoji">✨</span>
+        What Makes You Special
+    </button>
 
-<section id="homeScreen" class="screen">
+    <button class="menu-button" onclick="showPage('lovePage')">
+        <span class="emoji">😂</span>
+        Things I Love About You
+    </button>
 
-    <div class="home-content">
+    <button class="menu-button" onclick="showPage('amazingPage')">
+        <span class="emoji">👑</span>
+        Why You're Amazing
+    </button>
 
-        <div style="font-size:55px;">🎂</div>
+    <button class="menu-button" onclick="showPage('wishPage')">
+        <span class="emoji">🎂</span>
+        My Birthday Wishes
+    </button>
 
-        <h1>Happy Birthday, Sis! ❤️</h1>
+    <button class="menu-button" onclick="showPage('photoPage')">
+        <span class="emoji">📸</span>
+        See How Beautiful Sis Is
+    </button>
 
-        <p>
-            September 2 is officially your day! 🥳
-        </p>
+</div>
 
-        <p>
-            I made this little corner of the internet
-            just for you. Take your time and open
-            each surprise below. 💜
-        </p>
+</div></section><section id="letterPage" class="screen"><div class="message-page"><div class="message-card">
 
-        <div class="menu">
+    <h1>💌 A Letter For You</h1>
 
-            <button class="menu-button" onclick="showPage('letterPage')">
-                <span class="emoji">💌</span>
-                A Letter For You
-            </button>
+    <p>
+        Dear Sis,
+    </p>
 
-            <button class="menu-button" onclick="showPage('specialPage')">
-                <span class="emoji">✨</span>
-                What Makes You Special
-            </button>
+    <p>
+        Today isn't just another day. It's the day
+        the world got a little brighter because you
+        came into it.
+    </p>
 
-            <button class="menu-button" onclick="showPage('lovePage')">
-                <span class="emoji">😂</span>
-                Things I Love About You
-            </button>
+    <p>
+        I just want you to know how much you mean
+        to me. Sometimes I may not say it enough,
+        but having you as my sister is something
+        I genuinely appreciate.
+    </p>
 
-            <button class="menu-button" onclick="showPage('amazingPage')">
-                <span class="emoji">👑</span>
-                Why You're Amazing
-            </button>
+    <p>
+        We've had our moments 😂, we've laughed,
+        annoyed each other and probably tested
+        each other's patience more times than we
+        can count.
+    </p>
 
-            <button class="menu-button" onclick="showPage('wishPage')">
-                <span class="emoji">🎂</span>
-                My Birthday Wishes
-            </button>
+    <p>
+        But through everything, you're still my sis,
+        and I wouldn't trade that for anything.
+        ❤️
+    </p>
 
-            <!-- =========================
-                 SIXTH BUTTON ADDED
-            ========================= -->
+    <button class="back-button" onclick="showPage('homeScreen')">
+        ← Back
+    </button>
 
-            <button class="menu-button" onclick="showPage('photoPage')">
-                <span class="emoji">📸</span>
-                See How Beautiful Sis Is
-            </button>
+</div>
 
-        </div>
+</div></section><section id="specialPage" class="screen"><div class="message-page"><div class="message-card">
 
-    </div>
+    <h1>✨ What Makes You Special</h1>
 
-</section>
+    <p>
+        You have a way of making people feel
+        comfortable around you.
+    </p>
 
+    <p>
+        You can be funny when nobody expects it,
+        caring when someone needs you, and strong
+        even when things aren't easy.
+    </p>
 
-<!-- =========================
-     PAGE 1
-========================= -->
+    <p>
+        Your personality is one of those things
+        that cannot simply be copied.
+    </p>
 
-<section id="letterPage" class="screen">
+    <p>
+        There is only one YOU. ❤️
+    </p>
 
-    <div class="message-page">
+    <p>
+        And honestly... that's more than enough.
+    </p>
 
-        <div class="message-card">
+    <button class="back-button" onclick="showPage('homeScreen')">
+        ← Back
+    </button>
 
-            <h1>💌 A Letter For You</h1>
+</div>
 
-            <p>
-                Dear Sis,
-            </p>
+</div></section><section id="lovePage" class="screen"><div class="message-page"><div class="message-card">
 
-            <p>
-                Today isn't just another day. It's the day
-                the world got a little brighter because you
-                came into it.
-            </p>
+    <h1>😂 Things I Love About You</h1>
 
-            <p>
-                I just want you to know how much you mean
-                to me. Sometimes I may not say it enough,
-                but having you as my sister is something
-                I genuinely appreciate.
-            </p>
+    <p>
+        • Your funny moments 😂
+    </p>
 
-            <p>
-                We've had our moments 😂, we've laughed,
-                annoyed each other and probably tested
-                each other's patience more times than we
-                can count.
-            </p>
+    <p>
+        • The way you can turn an ordinary moment
+        into something memorable.
+    </p>
 
-            <p>
-                But through everything, you're still my sis,
-                and I wouldn't trade that for anything.
-                ❤️
-            </p>
+    <p>
+        • Your confidence.
+    </p>
 
-            <button class="back-button" onclick="showPage('homeScreen')">
-                ← Back
-            </button>
+    <p>
+        • Your caring side, even when you pretend
+        not to care.
+    </p>
 
-        </div>
+    <p>
+        • The fact that you're my sister and
+        unfortunately for you... you're stuck with me. 😂❤️
+    </p>
 
-    </div>
+    <p>
+        And yes, before you ask — I still reserve
+        the right to disturb you whenever I want. 😌
+    </p>
 
-</section>
+    <button class="back-button" onclick="showPage('homeScreen')">
+        ← Back
+    </button>
 
+</div>
 
-<!-- =========================
-     PAGE 2
-========================= -->
+</div></section><section id="amazingPage" class="screen"><div class="message-page"><div class="message-card">
 
-<section id="specialPage" class="screen">
+    <h1>👑 Why You're Amazing</h1>
 
-    <div class="message-page">
+    <p>
+        You're amazing because you keep going.
+    </p>
 
-        <div class="message-card">
+    <p>
+        You have your own dreams, your own journey
+        and your own story.
+    </p>
 
-            <h1>✨ What Makes You Special</h1>
+    <p>
+        Never allow anyone to make you feel like
+        you're not enough.
+    </p>
 
-            <p>
-                You have a way of making people feel
-                comfortable around you.
-            </p>
+    <p>
+        Keep being yourself.
+        Keep growing.
+        Keep smiling.
+        Keep winning.
+    </p>
 
-            <p>
-                You can be funny when nobody expects it,
-                caring when someone needs you, and strong
-                even when things aren't easy.
-            </p>
+    <p>
+        The future has so many beautiful things
+        waiting for you. ✨
+    </p>
 
-            <p>
-                Your personality is one of those things
-                that cannot simply be copied.
-            </p>
+    <button class="back-button" onclick="showPage('homeScreen')">
+        ← Back
+    </button>
 
-            <p>
-                There is only one YOU. ❤️
-            </p>
+</div>
 
-            <p>
-                And honestly... that's more than enough.
-            </p>
+</div></section><section id="wishPage" class="screen"><div class="message-page"><div class="message-card">
 
-            <button class="back-button" onclick="showPage('homeScreen')">
-                ← Back
-            </button>
+    <h1>🎂 My Birthday Wishes For You</h1>
 
-        </div>
+    <p>
+        I wish you happiness that doesn't depend
+        on circumstances.
+    </p>
 
-    </div>
+    <p>
+        I wish you success in everything you put
+        your heart into.
+    </p>
 
-</section>
+    <p>
+        I wish you peace, good health, genuine
+        friendships and beautiful opportunities.
+    </p>
 
+    <p>
+        May this new year of your life bring you
+        closer to everything you've been hoping for.
+    </p>
 
-<!-- =========================
-     PAGE 3
-========================= -->
+    <p>
+        May you have plenty of reasons to smile,
+        laugh and say,
+        <strong>"Wow, life is actually beautiful." ❤️</strong>
+    </p>
 
-<section id="lovePage" class="screen">
+    <p>
+        Happy Birthday once again, Sis! 🥳🎂💜
+    </p>
 
-    <div class="message-page">
+    <button class="back-button" onclick="showPage('homeScreen')">
+        ← Back
+    </button>
 
-        <div class="message-card">
+</div>
 
-            <h1>😂 Things I Love About You</h1>
+</div></section><section id="photoPage" class="screen"><div class="photo-page"><div class="photo-card">
 
-            <p>
-                • Your funny moments 😂
-            </p>
+    <h1>📸 See How Beautiful Sis Is 💜</h1>
 
-            <p>
-                • The way you can turn an ordinary moment
-                into something memorable.
-            </p>
+    <p>
+        Because one picture could never be enough... 😌❤️
+    </p>
 
-            <p>
-                • Your confidence.
-            </p>
+    <div class="photo-gallery">
 
-            <p>
-                • Your caring side, even when you pretend
-                not to care.
-            </p>
-
-            <p>
-                • The fact that you're my sister and
-                unfortunately for you... you're stuck with me. 😂❤️
-            </p>
-
-            <p>
-                And yes, before you ask — I still reserve
-                the right to disturb you whenever I want. 😌
-            </p>
-
-            <button class="back-button" onclick="showPage('homeScreen')">
-                ← Back
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PAGE 4
-========================= -->
-
-<section id="amazingPage" class="screen">
-
-    <div class="message-page">
-
-        <div class="message-card">
-
-            <h1>👑 Why You're Amazing</h1>
-
-            <p>
-                You're amazing because you keep going.
-            </p>
-
-            <p>
-                You have your own dreams, your own journey
-                and your own story.
-            </p>
-
-            <p>
-                Never allow anyone to make you feel like
-                you're not enough.
-            </p>
-
-            <p>
-                Keep being yourself.
-                Keep growing.
-                Keep smiling.
-                Keep winning.
-            </p>
-
-            <p>
-                The future has so many beautiful things
-                waiting for you. ✨
-            </p>
-
-            <button class="back-button" onclick="showPage('homeScreen')">
-                ← Back
-            </button>
-
-        </div>
+        <img src="file_00000000d230821087aab2edfc1b3a31.png"
+             alt="Beautiful Sis">
 
     </div>
 
-</section>
+    <button class="back-button" onclick="showPage('homeScreen')">
+        ← Back
+    </button>
 
+</div>
 
-<!-- =========================
-     PAGE 5
-========================= -->
-
-<section id="wishPage" class="screen">
-
-    <div class="message-page">
-
-        <div class="message-card">
-
-            <h1>🎂 My Birthday Wishes For You</h1>
-
-            <p>
-                I wish you happiness that doesn't depend
-                on circumstances.
-            </p>
-
-            <p>
-                I wish you success in everything you put
-                your heart into.
-            </p>
-
-            <p>
-                I wish you peace, good health, genuine
-                friendships and beautiful opportunities.
-            </p>
-
-            <p>
-                May this new year of your life bring you
-                closer to everything you've been hoping for.
-            </p>
-
-            <p>
-                May you have plenty of reasons to smile,
-                laugh and say,
-                <strong>"Wow, life is actually beautiful." ❤️</strong>
-            </p>
-
-            <p>
-                Happy Birthday once again, Sis! 🥳🎂💜
-            </p>
-
-            <button class="back-button" onclick="showPage('homeScreen')">
-                ← Back
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PAGE 6 — HER PHOTOS
-========================= -->
-
-<section id="photoPage" class="screen">
-
-    <div class="photo-page">
-
-        <div class="photo-card">
-
-            <h1>📸 See How Beautiful Sis Is 💜</h1>
-
-            <p>
-                Because one picture could never be enough... 😌❤️
-            </p>
-
-            <div class="photo-gallery">
-
-                <!-- PHOTO 1 -->
-                <img src="file_00000000d230821087aab2edfc1b3a31.jpg"
-                     alt="Beautiful Sis">
-
-                <!-- PHOTO 2 -->
-                <img src="file_00000000b908820aace7d8bce9a821b7.jpg"
-                     alt="Beautiful Sis">
-
-                <!-- PHOTO 3 — PUT THE THIRD PHOTO FILENAME HERE -->
-                <img src="THIRD-PICTURE-FILENAME.jpg"
-                     alt="Beautiful Sis">
-
-            </div>
-
-            <button class="back-button" onclick="showPage('homeScreen')">
-                ← Back
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
+</div></section><script>
 
 const music = document.getElementById("birthdayMusic");
 
-
 function openGift() {
 
-    // Start birthday music
     music.play().catch(function() {
         console.log("Music could not autoplay.");
     });
 
-    // Open the main page
     showPage("homeScreen");
 
-    // Start floating hearts
     startHearts();
 }
 
-
 function showPage(pageId) {
 
-    // Hide every screen
     const screens = document.querySelectorAll(".screen");
 
     screens.forEach(function(screen) {
         screen.classList.remove("active");
     });
 
-    // Show selected screen
     document.getElementById(pageId).classList.add("active");
 
-    // Scroll back to top
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
 }
-
-
-/* Floating hearts */
 
 function createHeart() {
 
@@ -815,7 +668,6 @@ function createHeart() {
     }, 9000);
 }
 
-
 let heartsStarted = false;
 
 function startHearts() {
@@ -827,7 +679,5 @@ function startHearts() {
     setInterval(createHeart, 700);
 }
 
-</script>
-
-</body>
-</html>
+</script></body>
+    </html>
