@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A Gift For You 🎁</title>
+<title>For My Amazing Sister ❤️</title>
 
 <style>
 * {
@@ -15,162 +15,280 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: Georgia, serif;
+    background: linear-gradient(135deg, #16001f, #3b0754, #7b1fa2);
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
+}
 
-    background:
-        linear-gradient(rgba(20,5,30,.45), rgba(20,5,30,.78)),
-        url("file_00000000b908820aace7d8bce9a821b7.png");
+/* ---------- GENERAL ---------- */
 
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    justify-content: center;
+.screen {
+    min-height: 100vh;
+    display: none;
     align-items: center;
-}
-
-.container {
-    text-align: center;
+    justify-content: center;
     padding: 25px;
+    text-align: center;
 }
 
-h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
+.screen.active {
+    display: flex;
+    animation: fadeIn 0.8s ease;
 }
 
-.subtitle {
-    font-size: 17px;
-    margin-bottom: 35px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* GIFT */
+/* ---------- GIFT SCREEN ---------- */
+
+#giftScreen {
+    flex-direction: column;
+}
+
+.small-text {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+#giftScreen h1 {
+    font-size: 32px;
+    margin: 5px 0 35px;
+}
 
 .gift {
-    width: 150px;
-    height: 120px;
     position: relative;
-    margin: 0 auto 35px;
+    width: 170px;
+    height: 150px;
     cursor: pointer;
-    animation: float 2s infinite ease-in-out;
+    animation: bounce 2s infinite;
 }
 
-.box {
+.gift-box {
     position: absolute;
-    bottom: 0;
     width: 150px;
-    height: 95px;
-    background: #6b287d;
-    border-radius: 8px;
-    border: 2px solid #e5c96b;
-}
-
-.lid {
-    position: absolute;
-    top: 15px;
-    left: -8px;
-    width: 166px;
-    height: 32px;
-    background: #823695;
-    border: 2px solid #e5c96b;
-    border-radius: 7px;
-    transition: .8s;
-}
-
-.ribbon-vertical {
-    position: absolute;
-    width: 22px;
-    height: 95px;
-    background: #e5c96b;
-    left: 64px;
+    height: 105px;
+    left: 10px;
     bottom: 0;
+    background: #d81b60;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-.ribbon-horizontal {
-    position: absolute;
-    width: 166px;
-    height: 17px;
-    background: #e5c96b;
-    left: -8px;
-    top: 23px;
-}
-
-.bow {
-    position: absolute;
-    top: -12px;
-    left: 47px;
-    width: 56px;
-    height: 30px;
-}
-
-.bow:before,
-.bow:after {
+.gift-box::after {
     content: "";
     position: absolute;
-    width: 32px;
-    height: 25px;
-    border: 5px solid #e5c96b;
+    width: 25px;
+    height: 105px;
+    background: #ffd54f;
+    left: 62px;
+    top: 0;
+}
+
+.gift-lid {
+    position: absolute;
+    width: 170px;
+    height: 35px;
+    left: 0;
+    top: 25px;
+    background: #ec407a;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.gift-lid::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    background: #ffd54f;
+    left: 72px;
+}
+
+.ribbon {
+    position: absolute;
+    width: 25px;
+    height: 55px;
+    background: #ffd54f;
+    top: -25px;
+    left: 72px;
+    z-index: 3;
     border-radius: 50%;
 }
 
-.bow:before {
-    left: -2px;
-}
-
-.bow:after {
-    right: -2px;
-}
-
-.gift.open .lid {
-    transform: translateY(-70px) rotate(-8deg);
-}
-
-@keyframes float {
-    0%,100% {
+@keyframes bounce {
+    0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-12px);
     }
 }
 
-.message {
-    display: none;
-    animation: appear 1.2s ease;
-}
-
-.message h2 {
-    font-size: 35px;
-    color: #f1d477;
-}
-
-.message p {
+.tap-text {
+    margin-top: 30px;
     font-size: 18px;
-    line-height: 1.7;
+    animation: pulse 1.5s infinite;
 }
 
-.enter {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 15px 28px;
-    border-radius: 30px;
-    text-decoration: none;
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ---------- HOME ---------- */
+
+.home-content {
+    width: 100%;
+    max-width: 650px;
+}
+
+.home-content h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.menu-button {
+    border: none;
+    padding: 22px 12px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.13);
     color: white;
-    border: 1px solid #e5c96b;
-    background: rgba(100,50,130,.65);
+    font-family: Georgia, serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
+    backdrop-filter: blur(8px);
 }
 
-@keyframes appear {
+.menu-button:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.23);
+}
+
+.menu-button:active {
+    transform: scale(0.95);
+}
+
+.emoji {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+/* ---------- MESSAGE PAGES ---------- */
+
+.message-page {
+    width: 100%;
+    max-width: 700px;
+}
+
+.message-card {
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    padding: 30px 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.message-card h1 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.message-card p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.back-button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #6a1b9a;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    animation: floatUp linear forwards;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes floatUp {
     from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
-        transform: translateY(20px);
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    #giftScreen h1 {
+        font-size: 27px;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .home-content h1 {
+        font-size: 30px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .message-card {
+        padding: 25px 18px;
+    }
+
+    .message-card h1 {
+        font-size: 26px;
+    }
+
+    .message-card p {
+        font-size: 16px;
     }
 }
 </style>
@@ -178,79 +296,438 @@ h1 {
 
 <body>
 
-<div class="container">
+<!-- =========================
+     BACKGROUND MUSIC
+========================= -->
 
-    <h1>A Little Surprise For You 🎁</h1>
+<audio id="birthdayMusic" loop>
+    <source src="birthday-song.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="subtitle">
-        There's something waiting inside...
+
+<!-- =========================
+     GIFT BOX SCREEN
+========================= -->
+
+<section id="giftScreen" class="screen active">
+
+    <div>
+        <div class="small-text">
+            SOMETHING SPECIAL FOR YOU
+        </div>
+
+        <h1>🎁 You Have a Surprise</h1>
+
+        <div class="gift" onclick="openGift()">
+
+            <div class="ribbon"></div>
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-box"></div>
+
+        </div>
+
+        <div class="tap-text">
+            Tap the gift to open it 💜
+        </div>
     </div>
 
-    <div class="gift" id="gift" onclick="openGift()">
+</section>
 
-        <div class="bow"></div>
 
-        <div class="lid"></div>
+<!-- =========================
+     HOME SCREEN
+========================= -->
 
-        <div class="box"></div>
+<section id="homeScreen" class="screen">
 
-        <div class="ribbon-vertical"></div>
+    <div class="home-content">
 
-        <div class="ribbon-horizontal"></div>
+        <div style="font-size:55px;">🎂</div>
 
-    </div>
-
-    <div id="tap">
-        <p>Tap the gift 🎁</p>
-    </div>
-
-    <div class="message" id="message">
-
-        <h2>Happy Birthday, Sis! ✨</h2>
+        <h1>Happy Birthday, Sis! ❤️</h1>
 
         <p>
-            Your little surprise has finally opened. 💜
-            <br>
-            Now there's a whole little world waiting
-            for you to discover.
+            September 2 is officially your day! 🥳
         </p>
 
-        <a class="enter" href="world.html">
-            Enter Your Little World ✨
-        </a>
+        <p>
+            I made this little corner of the internet
+            just for you. Take your time and open
+            each surprise below. 💜
+        </p>
+
+        <div class="menu">
+
+            <button class="menu-button" onclick="showPage('letterPage')">
+                <span class="emoji">💌</span>
+                A Letter For You
+            </button>
+
+            <button class="menu-button" onclick="showPage('specialPage')">
+                <span class="emoji">✨</span>
+                What Makes You Special
+            </button>
+
+            <button class="menu-button" onclick="showPage('lovePage')">
+                <span class="emoji">😂</span>
+                Things I Love About You
+            </button>
+
+            <button class="menu-button" onclick="showPage('amazingPage')">
+                <span class="emoji">👑</span>
+                Why You're Amazing
+            </button>
+
+            <button class="menu-button" onclick="showPage('wishPage')">
+                <span class="emoji">🎂</span>
+                My Birthday Wishes
+            </button>
+
+        </div>
 
     </div>
 
-</div>
+</section>
 
-<!-- Change this filename to whatever your music file is called -->
 
-<audio id="birthdaySong">
-    <source src="happy-birthday.mp3" type="audio/mpeg">
-</audio>
+<!-- =========================
+     PAGE 1
+========================= -->
+
+<section id="letterPage" class="screen">
+
+    <div class="message-page">
+
+        <div class="message-card">
+
+            <h1>💌 A Letter For You</h1>
+
+            <p>
+                Dear Sis,
+            </p>
+
+            <p>
+                Today isn't just another day. It's the day
+                the world got a little brighter because you
+                came into it.
+            </p>
+
+            <p>
+                I just want you to know how much you mean
+                to me. Sometimes I may not say it enough,
+                but having you as my sister is something
+                I genuinely appreciate.
+            </p>
+
+            <p>
+                We've had our moments 😂, we've laughed,
+                annoyed each other and probably tested
+                each other's patience more times than we
+                can count.
+            </p>
+
+            <p>
+                But through everything, you're still my sis,
+                and I wouldn't trade that for anything.
+                ❤️
+            </p>
+
+            <button class="back-button" onclick="showPage('homeScreen')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 2
+========================= -->
+
+<section id="specialPage" class="screen">
+
+    <div class="message-page">
+
+        <div class="message-card">
+
+            <h1>✨ What Makes You Special</h1>
+
+            <p>
+                You have a way of making people feel
+                comfortable around you.
+            </p>
+
+            <p>
+                You can be funny when nobody expects it,
+                caring when someone needs you, and strong
+                even when things aren't easy.
+            </p>
+
+            <p>
+                Your personality is one of those things
+                that cannot simply be copied.
+            </p>
+
+            <p>
+                There is only one YOU. ❤️
+            </p>
+
+            <p>
+                And honestly... that's more than enough.
+            </p>
+
+            <button class="back-button" onclick="showPage('homeScreen')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 3
+========================= -->
+
+<section id="lovePage" class="screen">
+
+    <div class="message-page">
+
+        <div class="message-card">
+
+            <h1>😂 Things I Love About You</h1>
+
+            <p>
+                • Your funny moments 😂
+            </p>
+
+            <p>
+                • The way you can turn an ordinary moment
+                into something memorable.
+            </p>
+
+            <p>
+                • Your confidence.
+            </p>
+
+            <p>
+                • Your caring side, even when you pretend
+                not to care.
+            </p>
+
+            <p>
+                • The fact that you're my sister and
+                unfortunately for you... you're stuck with me. 😂❤️
+            </p>
+
+            <p>
+                And yes, before you ask — I still reserve
+                the right to disturb you whenever I want. 😌
+            </p>
+
+            <button class="back-button" onclick="showPage('homeScreen')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 4
+========================= -->
+
+<section id="amazingPage" class="screen">
+
+    <div class="message-page">
+
+        <div class="message-card">
+
+            <h1>👑 Why You're Amazing</h1>
+
+            <p>
+                You're amazing because you keep going.
+            </p>
+
+            <p>
+                You have your own dreams, your own journey
+                and your own story.
+            </p>
+
+            <p>
+                Never allow anyone to make you feel like
+                you're not enough.
+            </p>
+
+            <p>
+                Keep being yourself.
+                Keep growing.
+                Keep smiling.
+                Keep winning.
+            </p>
+
+            <p>
+                The future has so many beautiful things
+                waiting for you. ✨
+            </p>
+
+            <button class="back-button" onclick="showPage('homeScreen')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 5
+========================= -->
+
+<section id="wishPage" class="screen">
+
+    <div class="message-page">
+
+        <div class="message-card">
+
+            <h1>🎂 My Birthday Wishes For You</h1>
+
+            <p>
+                I wish you happiness that doesn't depend
+                on circumstances.
+            </p>
+
+            <p>
+                I wish you success in everything you put
+                your heart into.
+            </p>
+
+            <p>
+                I wish you peace, good health, genuine
+                friendships and beautiful opportunities.
+            </p>
+
+            <p>
+                May this new year of your life bring you
+                closer to everything you've been hoping for.
+            </p>
+
+            <p>
+                May you have plenty of reasons to smile,
+                laugh and say,
+                <strong>"Wow, life is actually beautiful." ❤️</strong>
+            </p>
+
+            <p>
+                Happy Birthday once again, Sis! 🥳🎂💜
+            </p>
+
+            <button class="back-button" onclick="showPage('homeScreen')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
+const music = document.getElementById("birthdayMusic");
+
+
 function openGift() {
 
-    const gift = document.getElementById("gift");
-    const message = document.getElementById("message");
-    const tap = document.getElementById("tap");
-    const song = document.getElementById("birthdaySong");
+    // Start birthday music
+    music.play().catch(function() {
+        console.log("Music could not autoplay.");
+    });
 
-    gift.classList.add("open");
+    // Open the main page
+    showPage("homeScreen");
 
-    tap.style.display = "none";
+    // Start floating hearts
+    startHearts();
+}
+
+
+function showPage(pageId) {
+
+    // Hide every screen
+    const screens = document.querySelectorAll(".screen");
+
+    screens.forEach(function(screen) {
+        screen.classList.remove("active");
+    });
+
+    // Show selected screen
+    document.getElementById(pageId).classList.add("active");
+
+    // Scroll back to top
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+/* Floating hearts */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = ["❤️", "💜", "💗", "💕", "✨"];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 18) + "px";
+
+    document.body.appendChild(heart);
 
     setTimeout(function() {
+        heart.remove();
+    }, 9000);
+}
 
-        message.style.display = "block";
 
-        song.play().catch(function() {
-            console.log("Music needs user interaction.");
-        });
+let heartsStarted = false;
 
-    }, 700);
+function startHearts() {
+
+    if (heartsStarted) return;
+
+    heartsStarted = true;
+
+    setInterval(createHeart, 700);
 }
 
 </script>
