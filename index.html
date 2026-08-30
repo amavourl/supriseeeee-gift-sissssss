@@ -1,88 +1,558 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Supriseeee Gift Sis 🎁</title>
+
+<title>For My Beautiful Sister ✨</title>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f7e8f3;
-  font-family: Arial, sans-serif;
-  text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #12091d;
+    color: white;
+    overflow-x: hidden;
 }
 
-.container {
-  padding: 25px;
+/* =========================
+   GENERAL SECTION
+========================= */
+
+section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-h1 {
-  color: #8b2f72;
+/* =========================
+   BACKGROUND IMAGES
+========================= */
+
+.cover {
+    background-image:
+        linear-gradient(
+            rgba(10, 5, 15, 0.25),
+            rgba(10, 5, 15, 0.70)
+        ),
+        url("file_00000000b908820aace7d8bce9a821b7.png");
+
+    background-size: cover;
+    background-position: center;
 }
 
-.gift {
-  font-size: 110px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  animation: bounce 1.5s infinite;
+.photo-two {
+    background-image:
+        linear-gradient(
+            rgba(20, 8, 30, 0.58),
+            rgba(20, 8, 30, 0.78)
+        ),
+        url("file_00000000d230821087aab2edfc1b3a31.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-three {
+    background-image:
+        linear-gradient(
+            rgba(20, 8, 30, 0.58),
+            rgba(20, 8, 30, 0.80)
+        ),
+        url("file_00000000860882108592c886fb347aa6.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-one-again {
+    background-image:
+        linear-gradient(
+            rgba(15, 5, 25, 0.60),
+            rgba(15, 5, 25, 0.82)
+        ),
+        url("file_00000000b908820aace7d8bce9a821b7.png");
+
+    background-size: cover;
+    background-position: 50% 35%;
+}
+
+.photo-two-again {
+    background-image:
+        linear-gradient(
+            rgba(15, 5, 25, 0.60),
+            rgba(15, 5, 25, 0.82)
+        ),
+        url("file_00000000d230821087aab2edfc1b3a31.png");
+
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+.photo-three-again {
+    background-image:
+        linear-gradient(
+            rgba(15, 5, 25, 0.60),
+            rgba(15, 5, 25, 0.84)
+        ),
+        url("file_00000000860882108592c886fb347aa6.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================
+   COVER PAGE
+========================= */
+
+.cover-content {
+    text-align: center;
+    padding: 25px;
+    max-width: 800px;
+    animation: appear 2s ease;
+}
+
+.small-title {
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #f1d68a;
+}
+
+.cover h1 {
+    font-size: clamp(42px, 11vw, 85px);
+    line-height: 1;
+    margin-bottom: 22px;
+    text-shadow: 0 4px 25px rgba(0,0,0,0.6);
+}
+
+.cover p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.enter-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid #e5c76b;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    background: rgba(90, 50, 120, 0.45);
+    backdrop-filter: blur(8px);
+    transition: 0.4s;
+}
+
+.enter-button:hover {
+    background: rgba(150, 100, 190, 0.65);
+    transform: translateY(-4px);
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    animation: bounce 2s infinite;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.overlay {
+    width: 90%;
+    max-width: 850px;
+    padding: 45px 28px;
+    text-align: center;
+    background: rgba(20, 8, 30, 0.48);
+    border: 1px solid rgba(231, 202, 110, 0.45);
+    border-radius: 28px;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.number {
+    color: #e7c96c;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.overlay h2 {
+    font-size: clamp(32px, 8vw, 55px);
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #f4edf7;
+}
+
+/* =========================
+   FORTUNE
+========================= */
+
+.fortune-box {
+    margin-top: 28px;
+}
+
+.fortune-button {
+    border: none;
+    padding: 16px 28px;
+    border-radius: 30px;
+    background: #e4c467;
+    color: #24102f;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fortune-button:hover {
+    transform: scale(1.05);
+}
+
+#fortune {
+    margin-top: 25px;
+    min-height: 60px;
+    font-size: 19px;
+    color: #f2d778;
+    font-style: italic;
+}
+
+/* =========================
+   FINAL NOTE
+========================= */
+
+.signature {
+    margin-top: 30px;
+    font-size: 21px;
+    color: #e7c96c;
+    font-style: italic;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes bounce {
-  50% { transform: translateY(-12px); }
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -10px);
+    }
 }
 
-#surprise {
-  display: none;
-}
+/* =========================
+   PHONE
+========================= */
 
-#surprise img {
-  width: 90%;
-  max-width: 400px;
-  border-radius: 20px;
-  margin-top: 20px;
-}
+@media (max-width: 600px) {
 
-.message {
-  font-size: 22px;
-  font-weight: bold;
-  color: #7b245f;
-  margin-top: 20px;
+    .cover-content {
+        padding: 20px;
+    }
+
+    .cover h1 {
+        font-size: 48px;
+    }
+
+    .cover p {
+        font-size: 17px;
+    }
+
+    .overlay {
+        padding: 35px 22px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- =========================
+     OPENING COVER
+========================= -->
 
-<div id="gift">
-  <h1>🎁 Tap your surprise, sis! 🎁</h1>
-  <button class="gift" onclick="openGift()">🎁</button>
-</div>
+<section class="cover">
 
-<div id="surprise">
-  <h1>Surpriseeee! ❤️</h1>
+    <div class="cover-content">
 
-  <img src="file_00000000b908820aace7d8bce9a821b7.png">
+        <div class="small-title">
+            A Little Something For You
+        </div>
 
-  <div class="message">
-    I know it's small but please accept it.<br>
-    Happy birthday sis ❤️🎂🎉
-  </div>
-</div>
+        <h1>
+            Happy Birthday,<br>
+            Sis ✨
+        </h1>
 
-</div>
+        <p>
+            A little corner of the internet,<br>
+            created especially for you.
+        </p>
+
+        <a href="#who" class="enter-button">
+            Enter Your Little World ✨
+        </a>
+
+    </div>
+
+    <div class="scroll-hint">
+        ↑ SWIPE UP ↑
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 1
+========================= -->
+
+<section id="who" class="photo-two">
+
+    <div class="overlay">
+
+        <div class="number">
+            01
+        </div>
+
+        <h2>
+            Who She Is 💎
+        </h2>
+
+        <p>
+            She is more than just a sister.
+            She is someone whose presence brings
+            something special into the lives of the
+            people around her.
+            <br><br>
+            Beautiful in her own way, strong in ways
+            people may not always see, and deserving
+            of every beautiful thing life has to offer.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 2
+========================= -->
+
+<section class="photo-three">
+
+    <div class="overlay">
+
+        <div class="number">
+            02
+        </div>
+
+        <h2>
+            What Makes Her Special ✨
+        </h2>
+
+        <p>
+            There is something unforgettable about
+            someone who can simply be herself.
+            <br><br>
+            Her smile, her personality, her little
+            ways of doing things and the person she
+            continues to become all make her uniquely
+            special.
+            <br><br>
+            She doesn't have to be perfect to be
+            wonderful.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 3 — FORTUNE
+========================= -->
+
+<section class="photo-one-again">
+
+    <div class="overlay">
+
+        <div class="number">
+            03
+        </div>
+
+        <h2>
+            Her Good Fortune 🍀
+        </h2>
+
+        <p>
+            Some beautiful things are still waiting
+            for her.
+            <br><br>
+            New opportunities. Happiness.
+            Success. Beautiful surprises.
+            Peace. Love. Growth.
+            <br><br>
+            And perhaps a little extra luck along
+            the way. ✨
+        </p>
+
+        <div class="fortune-box">
+
+            <button class="fortune-button"
+                    onclick="revealFortune()">
+                🔮 Reveal My Fortune
+            </button>
+
+            <div id="fortune"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 4
+========================= -->
+
+<section class="photo-two-again">
+
+    <div class="overlay">
+
+        <div class="number">
+            04
+        </div>
+
+        <h2>
+            Birthday Wishes 🎂
+        </h2>
+
+        <p>
+            May this new chapter bring you more
+            reasons to smile than reasons to worry.
+            <br><br>
+            May your dreams find their way to you,
+            may your efforts bring beautiful results,
+            and may the coming year be filled with
+            moments that make you genuinely happy.
+            <br><br>
+            You deserve a beautiful year ahead.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 5
+========================= -->
+
+<section class="photo-three-again">
+
+    <div class="overlay">
+
+        <div class="number">
+            05
+        </div>
+
+        <h2>
+            A Note From Me 💌
+        </h2>
+
+        <p>
+            No matter how many words I write,
+            they probably won't be enough to explain
+            how special you are.
+            <br><br>
+            I hope you always remember that you are
+            appreciated, celebrated and loved.
+            <br><br>
+            Keep becoming the beautiful person you
+            are meant to be.
+            <br><br>
+            And whenever life gets difficult,
+            remember that brighter days can still
+            be ahead.
+        </p>
+
+        <div class="signature">
+            With love, from your sister ❤️
+        </div>
+
+    </div>
+
+</section>
+
 
 <script>
-function openGift() {
-  document.getElementById("gift").style.display = "none";
-  document.getElementById("surprise").style.display = "block";
+
+const fortunes = [
+    "A beautiful opportunity is closer than you think. ✨",
+    "This year may bring a surprise you never expected. 🌸",
+    "Your hard work will open a door for you. 🔑",
+    "Something you have been hoping for may finally begin to unfold. 💫",
+    "Good things are making their way toward you. 🍀",
+    "A new chapter will bring growth, confidence and happiness. 👑",
+    "Your future holds more possibilities than you can currently see. 🌟",
+    "Someone may soon remind you just how special you are. 💕",
+    "A season of greater peace and beautiful moments is ahead. 🕊️",
+    "Your next chapter has the potential to be your brightest one yet. ✨"
+];
+
+function revealFortune() {
+
+    const randomIndex =
+        Math.floor(Math.random() * fortunes.length);
+
+    document.getElementById("fortune").innerHTML =
+        fortunes[randomIndex];
+
 }
+
 </script>
 
 </body>
